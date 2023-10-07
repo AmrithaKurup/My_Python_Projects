@@ -1,4 +1,10 @@
-
+'''
+Its a simple Tic-Tac-Toe game
+2 players will be playing (both sitting at the same computer)
+The board will be printed out every time a player makes a move
+Player 1 is 'X' and player 2 is 'O'
+You should remember the position of the game when it displays in the begining
+'''
 game_on = True
 game_board_position = ['0', '1', '2', '3', '4', '5', '6', '7', '8']
 game_board_index = ['0', '1', '2', '3', '4', '5', '6', '7', '8']
