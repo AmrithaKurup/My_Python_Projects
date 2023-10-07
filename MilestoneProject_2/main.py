@@ -1,10 +1,16 @@
+'''
+This is a lite version of 'Black Jack' game and the rules used here are slightly different than original game.
+The game have only one player and an automated dealer.
+The 'Ace' has only one value and its 1
+'''
+
 import random
 x = ''
 dealer = []
 player = []
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
-values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Ten': 10, 'Jack': 10, 'Queen': 10, 'King': 10, 'Ace': 1}
+values = {'Ace': 1, 'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Ten': 10, 'Jack': 10, 'Queen': 10, 'King': 10}
 
 playing = True
 cont = True
@@ -24,7 +30,7 @@ class Card:
         return self.rank + ' of ' + self.suit
 
 
-class Deck:
+class Deck: #created the whole deck of cards
 
     def __init__(self):
         self.sum1 = 0
@@ -80,7 +86,7 @@ class Deck:
         return self.sum2
 
 
-class Chips:
+class Chips: #The value of 1 chip is 1
 
     def __init__(self, total):
         self.total = total  # This can be set to a default value or supplied by a user input
@@ -113,7 +119,7 @@ class Chips:
 
 
 while playing:
-    print("Welcome to BlackJack")
+    print("Welcome to BlackJack!")
     show_card = Deck()
     show_cards = show_card.deal()
 
